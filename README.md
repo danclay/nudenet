@@ -1,3 +1,19 @@
+Modification: Allows for use as shown as a node module (very crude modification)
+
+```js
+const {detect} = require("./src/main");
+const {inspect} = require("util");
+
+const a = async () => {
+    // args: input, output?, debug? (false default, no logs)
+    const res = await detect("samples/nude.jpg", "samples/nude-out.jpg");
+    console.log(inspect(res));
+};
+
+a();
+```
+
+
 # NudeNet: NSFW Object Detection for TFJS and NodeJS
 
 ## Notes
