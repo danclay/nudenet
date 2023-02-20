@@ -3,10 +3,11 @@ const log = require('@vladmandic/pilogger');
 const tf = require('@tensorflow/tfjs-node');
 
 const { Canvas, loadImage } = require('canvas'); // eslint-disable-line node/no-unpublished-require
-
+const path = require("path");
+const mainPath = path.join(require.resolve("./main.js"), "../model/model.json");
 const options = { // options
   debug: true,
-  modelPath: 'file://model/model.json',
+  modelPath: mainPath,
   minScore: 0.30,
   maxResults: 50,
   iouThreshold: 0.5,
